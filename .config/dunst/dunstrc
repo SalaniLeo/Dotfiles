@@ -1,0 +1,146 @@
+[global]
+	monitor = 0
+	follow = none
+
+	width = 350
+	height = 250
+
+	origin = top-right
+	offset = 10x10
+
+	progress_bar = true
+
+	progress_bar_height = 10
+	progress_bar_frame_width = 0
+	progress_bar_min_width = 125
+	progress_bar_max_width = 250
+	progress_bar_corner_radius = 4
+	icon_corner_radius = 5
+	close_all = ctrl+space
+	history = mod1+grave
+
+	indicate_hidden = yes
+
+	transparency = 50
+
+	separator_height = 10
+	padding = 10
+ 	horizontal_padding = 10
+	text_icon_padding = 10
+
+	frame_width = 2
+	gap_size = 10
+	frame_color = "#FFE9C7"
+
+    separator_color = frame
+
+    # Sort messages by urgency.
+    sort = yes
+    idle_threshold = 0
+
+    ### Text ###
+
+    font = fixed 11
+    line_height = 3
+    markup = full
+
+    # The format of the message.  Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    #   %n  progress value if set without any extra characters
+    #   %%  Literal %
+    # Markup is allowed
+		format = "󰂜  %a\n<b>%s</b>\n%b"
+
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = -1
+    word_wrap = yes
+    ellipsize = middle
+
+    ignore_newline = no
+
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = no
+
+    ### Icons ###
+
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    sticky_history = no
+    history_length = 20
+
+    ### Misc/Advanced ###
+
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 10
+    ignore_dbusclose = false
+
+    ### Legacy
+    force_xinerama = false
+
+    ### mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+#[urgency_low]
+#    # IMPORTANT: colors have to be defined in quotation marks.
+#    # Otherwise the "#" and following would be interpreted as a comment.
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with low urgency, uncomment to enable
+#    #icon = /path/to/icon
+#
+#[urgency_normal]
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with normal urgency, uncomment to enable
+#    #icon = /path/to/icon
+#
+#[urgency_critical]
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with critical urgency, uncomment to enable
+#    #icon = /path/to/icon
+
+
+[urgency_low]
+    background = "#1A1515"
+    foreground = "#FFE9C7"
+    frame_color = "#FFE9C7"
+    icon = "/home/leo/.config/dunst/icons/low-normal.png"
+    timeout = 0
+
+[urgency_normal]
+    background = "#1A1515"
+    foreground = "#FFE9C7"
+    frame_color = "#FFE9C7"
+    icon = "/home/leo/.config/dunst/icons/low-normal.png"
+    timeout = 0
+
+[urgency_critical]
+    background = "#1A1515"
+    foreground = "#FFE9C7"
+    frame_color = "#CF223E"
+    #frame_color = "#f38ba8"
+    icon = "/home/leo/.config/dunst/icons/critical.svg"
+    timeout = 0
