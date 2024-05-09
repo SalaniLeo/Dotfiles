@@ -6,7 +6,7 @@
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
-      "on-click": "sh $HOME/.config/wofi/powermenu.sh"
+      "on-click": "bash /home/leo/.config/rofi/powermenu/powermenu.sh"
     },
     "hyprland/workspaces": {
       "format": "{name}",
@@ -67,7 +67,7 @@
       "format-on": "󰂯",
       "format-off": "󰂲",
       "on-click": "rfkill toggle bluetooth",
-      "format-disabled": "!", 
+      "format-disabled": "󰂲", 
       "format-connected": "󰂱",
       "format-alt": "{device_alias} 󰂯",
       "format-alt-click": "click-right",
@@ -83,8 +83,8 @@
         "format-alt-click": "click-right",
         "format-icons": {
             "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-            "ethernet": [""],
-            "disconnected": ["󱳑"]
+            "ethernet": ["󰛳"],
+            "disconnected": ["󰲛"]
         },
         "tooltip": true,
         "tooltip-format": "{ipaddr} {signalStrength}%",

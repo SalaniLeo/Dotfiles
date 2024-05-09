@@ -24,17 +24,19 @@ function get_volume_icon {
     volume=$(get_volume)
     mute=$(get_mute)
     if [ "$volume" -eq 0 ] || [ "$mute" == "yes" ] ; then
-        volume_icon=""
-    elif [ "$volume" -lt 50 ]; then
-        volume_icon=""
+        volume_icon="  "
+    elif [ "$volume" -lt 33 ]; then
+        volume_icon="󰕿 "
+    elif [ "$volume" -lt 66 ]; then
+        volume_icon="󰖀 "
     else
-        volume_icon=""
+	volume_icon="󰕾 "
     fi
 }
 
 # Always returns the same icon - I couldn't get the brightness-low icon to work with fontawesome
 function get_brightness_icon {
-    brightness_icon=""
+    brightness_icon="󰖨 "
 }
 
 function get_album_art {
@@ -78,9 +80,9 @@ function show_volume_notif {
             get_album_art
         fi
 
-        notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -i "$album_art" "$volume_icon $volume%" "$current_song"
+        notify-send --app-name="Volume" -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -i "$album_art" "$volume_icon $volume%" "$current_song"
     else
-        notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume "$volume_icon $volume%"
+        notify-send --app-name="Volume" -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume "$volume_icon $volume%"
     fi
 }
 
@@ -94,7 +96,7 @@ function show_music_notif {
         get_album_art
     fi
 
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:music_notif -i "$album_art" "$song_title" "$song_artist - $song_album"
+    notify-send --app-name="Music" -t $notification_timeout -h string:x-dunst-stack-tag:music_notif -i "$album_art" "$song_title" "$song_artist - $song_album"
 }
 
 # Displays a brightness notification using dunstify
@@ -103,7 +105,7 @@ function show_brightness_notif {
     percentage=$(( ($brightness * 100) / 255 ))
     echo $percentage
     get_brightness_icon
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$percentage "$brightness_icon $percentage%"
+    notify-send --app-name="Brightness" -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$percentage "$brightness_icon $percentage%"
 }
 
 # Main function - Takes user input, "volume_up", "volume_down", "brightness_up", or "brightness_down"
