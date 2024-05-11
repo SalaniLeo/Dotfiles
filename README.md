@@ -1,6 +1,6 @@
 # 🍪 Dotfiles
 
-Hi! Here are the dotfiles of my Linux installation, I hope you'll like them!
+Hi! Here are the dotfiles of my Arch Linux setup, I hope you'll like them!
 
 Made with <a href="https://github.com/Biscuit-Theme">Biscuit Color Scheme</a>.
 
@@ -12,15 +12,16 @@ Dependencies:
 
     $ pacman -S hyprland waybar wofi dunst kitty neofetch grim slurp cliphist zsh hyprpaper
 
-Fonts: 
-     
+Fonts:
+
     $ pacman -S nerd-fonts, ttf-font-awesome
 
 Laptop:
-    
+
     $ pacman -S brightnessctl
 
 <img src="/assets/desktop.png">
+<img src="/assets/powermenu.png">
 <img src="/assets/spotify.png">
 <img src="/assets/waybar.png">
 <img src="/assets/miscellanous.png">
