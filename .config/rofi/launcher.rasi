@@ -30,8 +30,8 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               12px;
-    border-color:                #FFE9C7;
-    background-color:            #1A1515;
+    border-color:                #88c0d0;
+    background-color:            #2e3440;
     cursor:                      "default";
 }
 

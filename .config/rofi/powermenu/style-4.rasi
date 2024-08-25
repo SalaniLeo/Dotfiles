@@ -12,13 +12,20 @@ configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
-
 /*
 USE_BUTTONS=YES
 */
+
+* {
+    font: "Jetbrains Mono 12";
+    background:     #1E2127FF;
+    background-alt: #282B31FF;
+    foreground:     #FFFFFFFF;
+    selected:       #61AFEFFF;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+}
+
 
 /*****----- Main Window -----*****/
 window {
@@ -37,9 +44,9 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               10px;
-    border-color:                #FFE9C7;
+    border-color:                #88c0d0;
     cursor:                      "default";
-    background-color:            #1A1515;
+    background-color:            #2e3440;
 }
 
 /*****----- Main Box -----*****/
@@ -65,7 +72,7 @@ inputbar {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #cdd3e0;
     children:                    [ "textbox-prompt-colon", "prompt"];
 }
 
@@ -76,7 +83,6 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
     padding:                     12px 16px;
     border-radius:               0px;
     background-color:            @urgent;
@@ -99,14 +105,14 @@ message {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            @background-alt;
-    text-color:                  @foreground;
+    text-color:                  #cdd3e0;
 }
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @foreground;
+    placeholder-color:           #cdd3e0;
     blink:                       true;
     markup:                      true;
 }
@@ -116,7 +122,7 @@ error-message {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            @background;
-    text-color:                  @foreground;
+    text-color:                  #cdd3e0;
 }
 
 /*****----- Listview -----*****/
@@ -131,7 +137,6 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
     spacing:                     15px;
     margin:                      0px;
     padding:                     0px;
@@ -139,7 +144,7 @@ listview {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #cdd3e0;
     cursor:                      "default";
 }
 
@@ -147,17 +152,17 @@ listview {
 element {
     enabled:                     true;
     spacing:                     0px;
-    margin:                      0px;
+    margin-right:                5px;
     padding:                     20px 0px;
     border:                      0px solid;
     border-radius:               10px;
     border-color:                @selected;
-    background-color:            #2D2424;
-    text-color:                  @foreground;
+    background-color:            #2e3440;
+    text-color:                  #cdd3e0;
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 24";
+    font:                        "Nerd-Font 24";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
@@ -165,6 +170,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            #725A5A;
+    background-color:            #88c0d0;
     text-color:                  var(background);
 }

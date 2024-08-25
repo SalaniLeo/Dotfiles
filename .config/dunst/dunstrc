@@ -30,7 +30,7 @@
 
 	frame_width = 2
 	gap_size = 10
-	frame_color = "#FFE9C7"
+	frame_color = "#88c0d0"
 
     separator_color = frame
 
@@ -99,48 +99,23 @@
 [experimental]
     per_monitor_dpi = false
 
-#[urgency_low]
-#    # IMPORTANT: colors have to be defined in quotation marks.
-#    # Otherwise the "#" and following would be interpreted as a comment.
-#    background = "#1a1b26"
-#    foreground = "#00ffff"
-#    timeout = 0
-#    # Icon for notifications with low urgency, uncomment to enable
-#    #icon = /path/to/icon
-#
-#[urgency_normal]
-#    background = "#1a1b26"
-#    foreground = "#00ffff"
-#    timeout = 0
-#    # Icon for notifications with normal urgency, uncomment to enable
-#    #icon = /path/to/icon
-#
-#[urgency_critical]
-#    background = "#1a1b26"
-#    foreground = "#00ffff"
-#    timeout = 0
-#    # Icon for notifications with critical urgency, uncomment to enable
-#    #icon = /path/to/icon
-
-
 [urgency_low]
-    background = "#1A1515"
-    foreground = "#FFE9C7"
-    frame_color = "#FFE9C7"
+    background = "#2e3440"
+    foreground = "#cdd3e0"
+    frame_color = "#88c0d0"
     icon = "/home/leo/.config/dunst/icons/low-normal.png"
     timeout = 0
 
 [urgency_normal]
-    background = "#1A1515"
-    foreground = "#FFE9C7"
-    frame_color = "#FFE9C7"
+    background = "#2e3440"
+    foreground = "#cdd3e0"
+    frame_color = "#88c0d0"
     icon = "/home/leo/.config/dunst/icons/low-normal.png"
     timeout = 0
 
 [urgency_critical]
-    background = "#1A1515"
-    foreground = "#FFE9C7"
-    frame_color = "#CF223E"
-    #frame_color = "#f38ba8"
+    background = "#2e3440"
+    foreground = "#cdd3e0"
+    frame_color = "#88c0d0"
     icon = "/home/leo/.config/dunst/icons/critical.svg"
     timeout = 0

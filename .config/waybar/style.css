@@ -1,15 +1,15 @@
 * {
   border: none;
   font-family: 'Fira Code', 'Symbols Nerd Font Mono';
-  font-size: 16px;
+  font-size: 15px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 35px;
-  color:#FFE9C7;
+  color:#cdd3e0;
 }
 
 /* All elements with border, comment to remove */
 #custom-arch, #workspaces, #cpu, #clock, .custom-spotify, #custom-spotify, #tray, #custom-clipboard {
-  border: solid 2px #FFE9C7;
+  border: solid 2px #88c0d0;
 }
 
 /* Creates floating modules */
@@ -21,8 +21,8 @@ window#waybar {
 #custom-arch, #workspaces, #cpu, .custom-spotify, #clock, #tray, #custom-clipboard {
   font-weight: 700;
   border-radius: 10px;
-  background-color: #1A1515;
-  color: #FFE9C7;
+  background-color: #2e3440;
+  color: #cdd3e0;
   margin-top: 10px;
   margin-right: 10px;
   padding-left: 10px;
@@ -40,32 +40,32 @@ window#waybar {
 }
 
 .custom-clipboard {
-  background-color: #1A1515;
+  background-color: #2e3440;
 }
 
 /* Add element here to include in right modules */
 #backlight, #pulseaudio, #bluetooth, #network, #battery, #power-profiles-daemon {
-  border-bottom: solid 2px #FFE9C7;
-  border-top: solid 2px #FFE9C7;  
+  border-bottom: solid 2px #88c0d0;
+  border-top: solid 2px #88c0d0;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: #1A1515;
-  color: #FFE9C7;
+  background-color: #2e3440;
+  color: #cdd3e0;
   margin-top: 10px;
 }
 
 /* Adds right border to right modules */
-#battery {
+#pulseaudio {
   border-radius: 0px 10px 10px 0px; /* trim the righthand borders to prevent bleed behind the left-shifted blank module */
   padding-right: 15px;
-  border-right: solid 2px #FFE9C7;
+  border-right: solid 2px #88c0d0;
 }
 
 /* Adds left border to left modules */
-#backlight {
+#network {
   border-radius: 10px 0 0 10px; /* Top-left, top-right, bottom-right, bottom-left */
   padding-left: 15px;
-  border-left: solid 2px #FFE9C7;
+  border-left: solid 2px #88c0d0;
 }
 
 /*
